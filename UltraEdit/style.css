@@ -1,0 +1,207 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+li{
+    display: flex;
+    flex: auto;
+    font-size: medium;
+    list-style-type: none;
+    cursor: pointer;
+   
+}
+.box1{
+    display: flex;
+    flex-grow: 5;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 175px;
+}
+.box7{
+    flex-grow: 2;
+}
+.bigbox{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 45px;
+}
+.firstline{
+    font-size:2.5vmax;
+    
+}
+.UE{
+    font-weight: bold;
+}
+.secondline{
+    font-size:x-large;
+    width: 65vw;
+    text-align: center;
+    padding-bottom: 0;
+}
+.thirdline{
+    display: flex;
+    padding-top: 0;
+    width: 20vw;
+    height: 40px;
+    justify-content: center;
+    padding-top: 20px;
+    color: aliceblue;
+    background-color: #00B6D1;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.uebox{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 72vw;
+    justify-content: center;
+}
+.DU{
+    font-size: x-large;
+}
+.finalbox{
+    display: grid;
+    grid-template-columns: [a]300px [b]300px [c]300px;
+    gap: 40px 40px;
+    justify-content: center;
+
+}
+.bax{
+    height: 192px;
+    width: 300px;
+    background-color: #F9F9F9;
+    /* background-color: bisque; */
+    /* border: 2px solid; */
+}
+.text1{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 117px;
+}
+.text2{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 105px;
+}
+.text3{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 105px;
+}
+.text4{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 105px;
+}
+.text5{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 105px;
+}
+.text6{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 62px;
+}
+.text7{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 131px;
+}
+.text8{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 126px;
+}
+.text9{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 127px;
+}
+.text10{
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    top: 28px;
+    left: 126px;
+}
+.downbox{
+    background-color: #5cb85c;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    height: 25px;
+    width: 170px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 110px;
+    left: 59px;
+}
+.downbox:hover{
+    opacity: 70%;
+}
+.downbox1:hover{
+    opacity: 80%;
+}
+.small_text{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 29px;
+}
+.downbox1{
+    background-color: #5cb85c;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    height: 25px;
+    width: 170px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 125px;
+    left: 59px;
+}
+.downbox1 a{
+    text-decoration: none;
+    color: #F9F9F9;
+}
+.downbox a{
+    text-decoration: none;
+    color: #F9F9F9;
+}
