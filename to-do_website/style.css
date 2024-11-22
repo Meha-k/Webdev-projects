@@ -1,0 +1,149 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('cup.jpg'); /* Set the image as background */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Make sure the background stays fixed while scrolling */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the container slightly towards the top */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container styles */
+div {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
+    margin-top: 30px; /* Adds some space from the top of the screen */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+/* Input field styles */
+input[type="text"] {
+    padding: 12px 20px;
+    font-size: 1rem;
+    width: 100%; /* Ensure it takes up the full width of the container */
+    max-width: 100%; /* Prevents overflow */
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    width: 100%; /* Ensure button takes up the full width */
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure the button respects padding */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Task list container */
+#tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Task item styles */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    flex-direction: column; /* Stack the elements vertically */
+}
+
+.task span {
+    flex-grow: 1;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px; /* Add some space below the task title */
+}
+
+/* Hover effect for task */
+.task:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container for task actions */
+.task .button-container {
+    display: flex; /* Align buttons side by side */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Add space between buttons */
+    width: 100%; /* Ensure buttons stay within the container */
+}
+
+/* Individual task action buttons */
+.task button {
+    background-color: transparent;
+    color: #e74c3c;
+    border: none;
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 8px 12px; /* Smaller padding */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+    min-width: 70px; /* Set a minimum width to make the buttons compact */
+}
+
+.task button:hover {
+    color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Styles for completed tasks */
+.task.completed span {
+    text-decoration: line-through;
+    color: #bbb;
+    opacity: 0.7;
+}
+
+.task.completed button {
+    color: #2ecc71;
+}

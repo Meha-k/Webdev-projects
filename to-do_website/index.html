@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish To-Do List</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Enter a new task" />
+        <button onclick="addTask()">Add Task</button>
+        <div id="tasks"></div>
+    </div>
+
+    <script>
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        function saveTasks() {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function renderTasks() {
+            const taskList = document.getElementById('tasks');
+            taskList.innerHTML = tasks.map((task, index) => `
+                <div class="task ${task.completed ? 'completed' : ''}">
+                    <span>${task.title}</span>
+                    <div class="button-container">
+                        <button onclick="toggleTask(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
+                        <button onclick="deleteTask(${index})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const title = taskInput.value.trim();
+            if (title) {
+                tasks.push({ title, completed: false });
+                saveTasks();
+                renderTasks();
+                taskInput.value = '';
+            } else {
+                alert('Please enter a task!');
+            }
+        }
+
+        function toggleTask(index) {
+            tasks[index].completed = !tasks[index].completed;
+            saveTasks();
+            renderTasks();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            saveTasks();
+            renderTasks();
+        }
+
+        // Initialize the app
+        renderTasks();
+    </script>
+</body>
+</html>
